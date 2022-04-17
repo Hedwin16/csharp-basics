@@ -1,0 +1,15 @@
+C:\Users\Hds\Init C Sharp\bin\Debug\net6.0\Init C Sharp.exe
+C:\Users\Hds\Init C Sharp\bin\Debug\net6.0\Init C Sharp.deps.json
+C:\Users\Hds\Init C Sharp\bin\Debug\net6.0\Init C Sharp.runtimeconfig.json
+C:\Users\Hds\Init C Sharp\bin\Debug\net6.0\Init C Sharp.dll
+C:\Users\Hds\Init C Sharp\bin\Debug\net6.0\Init C Sharp.pdb
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.csproj.AssemblyReference.cache
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.AssemblyInfoInputs.cache
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.AssemblyInfo.cs
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.csproj.CoreCompileInputs.cache
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.dll
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\refint\Init C Sharp.dll
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.pdb
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\Init C Sharp.genruntimeconfig.cache
+C:\Users\Hds\Init C Sharp\obj\Debug\net6.0\ref\Init C Sharp.dll
