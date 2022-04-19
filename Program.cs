@@ -37,3 +37,31 @@ int sumar(int num1, int num2)
 {
     return num1+num2;
 }
+
+calcularPromedio();
+
+void calcularPromedio()
+{
+    double promedio = 0;
+    int numeroAlumnos = 0;
+    System.Console.WriteLine("Para finalizar el algoritmo ingrese el valor '123'");
+    while(true){
+        Console.WriteLine("Ingrese nota de alumno: ");
+        int nota = 0;
+        try
+        {
+        nota = Convert.ToInt32(Console.ReadLine());
+        }
+        catch (System.FormatException)
+        {
+            throw new Exception("Error Introduzca un numero válido....");
+        }
+        if(nota == 123){
+            break;
+        }
+        promedio = promedio + nota;
+        numeroAlumnos++;
+    }
+    promedio = promedio/(double)numeroAlumnos;
+    System.Console.WriteLine("El promedio final es de: "+promedio);
+}
