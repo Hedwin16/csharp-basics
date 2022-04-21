@@ -27,8 +27,16 @@ namespace wpfClass
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World! ");
+            MessageBox.Show("Hello World! - Direct Event");
 
+        }
+        private void Button_MouseUP(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("El boton ha sido soltado... - Bubbling Event");
+        }
+        private void Button_PreviewMouseUp(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("El boton ha sido soltado... - Tunneling Event");
         }
     }
 }

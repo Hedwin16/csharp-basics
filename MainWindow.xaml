@@ -13,6 +13,8 @@
                 <ListBoxItem Content="Item 2" />
                 <ListBoxItem Content="Item 3" />
             </ListBox>
-            <Button Content="Click Aquí" Click="Button_Click" Height="50" Width="100" Margin="10"></Button>
+            <!-- <Button Content="Click Aquí" Click="Button_MouseUP" Height="50" Width="100" Margin="10"></Button> -->
+            <!-- <Button Content="Click Aquí" MouseUp="Button_MouseUP" Height="50" Width="100" Margin="10"></Button> -->
+            <Button Content="Click Aquí" PreviewMouseUp="Button_PreviewMouseUp" Height="50" Width="100" Margin="10"></Button>
         </StackPanel>
 </Window>
