@@ -7,19 +7,16 @@
         mc:Ignorable="d"
         Title="Aplicacion WPF" Height="450" Width="800">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Button Grid.Column="0">
-                Hola
-            </Button>
-            <Button Grid.Column="1" Grid.Row="1">
-                Hola 2
+            <Button Height="100" Width="200" Content="Button" Background="PaleVioletRed">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="FontSize" Value="30" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>                
+                </Button.Style>            
             </Button>
 
         </Grid>
