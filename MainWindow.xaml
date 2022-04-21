@@ -15,6 +15,6 @@
             </ListBox>
             <!-- <Button Content="Click Aquí" Click="Button_MouseUP" Height="50" Width="100" Margin="10"></Button> -->
             <!-- <Button Content="Click Aquí" MouseUp="Button_MouseUP" Height="50" Width="100" Margin="10"></Button> -->
-            <Button Content="Click Aquí" PreviewMouseUp="Button_PreviewMouseUp" Height="50" Width="100" Margin="10"></Button>
+            <Button Content="Click Aquí" PreviewMouseLeftButtonDown="Button_PreviewMouseLeftButtonDown" PreviewMouseRightButtonDown="Button_PreviewMouseRightButtonDown" Height="50" Width="100" Margin="10"></Button>
         </StackPanel>
 </Window>

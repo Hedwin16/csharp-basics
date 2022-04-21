@@ -38,5 +38,14 @@ namespace wpfClass
         {
             MessageBox.Show("El boton ha sido soltado... - Tunneling Event");
         }
+         
+         private void Button_PreviewMouseLeftButtonDown(object sender, MouseEventArgs e)
+         {
+            MessageBox.Show("El boton izquierdo ha sido presionado... - Tunneling Event");
+         }
+         private void Button_PreviewMouseRightButtonDown(object sender, MouseEventArgs e)
+         {
+            MessageBox.Show("El boton derecho ha sido soltado... - Tunneling Event");
+         }
     }
 }
