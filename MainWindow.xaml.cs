@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace wpfClass
 {
@@ -20,34 +21,13 @@ namespace wpfClass
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Suma ObjetoSuma {get; set;}
         public MainWindow()
         {
             InitializeComponent();
-            MiSlider.Value=30;
-            MiTextBox.Text = MiSlider.Value.ToString();
+            ObjetoSuma=new Suma{Num1="1", Num2="3"};
+            this.DataContext = ObjetoSuma;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hello World! - Direct Event");
-
-        }
-        private void Button_MouseUP(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("El boton ha sido soltado... - Bubbling Event");
-        }
-        private void Button_PreviewMouseUp(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("El boton ha sido soltado... - Tunneling Event");
-        }
-         
-         private void Button_PreviewMouseLeftButtonDown(object sender, MouseEventArgs e)
-         {
-            MessageBox.Show("El boton izquierdo ha sido presionado... - Tunneling Event");
-         }
-         private void Button_PreviewMouseRightButtonDown(object sender, MouseEventArgs e)
-         {
-            MessageBox.Show("El boton derecho ha sido soltado... - Tunneling Event");
-         }
     }
 }
