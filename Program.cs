@@ -12,6 +12,9 @@
 // {
 //     Console.WriteLine("Número: "+lista[i]);
 // }
+// Añadir los archivos descargados desde la oficina al repositorio
+// Expresiones Regulares + Eventos y Delegados:wq
+//
 
 leerTxt();
 Console.WriteLine("Introduce tu nombre: ");
