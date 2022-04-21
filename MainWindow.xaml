@@ -6,17 +6,13 @@
         xmlns:local="clr-namespace:wpfClass"
         mc:Ignorable="d"
         Title="Aplicacion WPF" Height="450" Width="800">
-    <Grid>
-        <!-- <TextBlock HorizontalAlignment="Left" Margin="376, 196, 0,0" TextWrapping="Wrap" Text="Hello World" VerticalAlignment="Top" /> -->
-        <!-- <Button Content="Click Aquí" Height="50" Width="100" FontSize="16" /> -->
-        <Button Height="50" Width="100">
-            <Button.FontSize>18</Button.FontSize>
-            <!-- <Button.Content>Click</Button.Content> -->
-            <WrapPanel>
-               <TextBlock Foreground="Blue"> Boton </TextBlock> 
-               <TextBlock Foreground="Red"> Boton </TextBlock> 
-            </WrapPanel>
-        </Button>
-
-    </Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Margin="20">Program Title</TextBlock>
+            <ListBox Height="100" Width="100">
+                <ListBoxItem Content="Item 1" />
+                <ListBoxItem Content="Item 2" />
+                <ListBoxItem Content="Item 3" />
+            </ListBox>
+            <Button Content="Click Aquí" Click="Button_Click" Height="50" Width="100" Margin="10"></Button>
+        </StackPanel>
 </Window>
