@@ -13,6 +13,7 @@
 //     Console.WriteLine("Número: "+lista[i]);
 // }
 
+leerTxt();
 Console.WriteLine("Introduce tu nombre: ");
 string nombre = "Nombre";
 nombre = Console.ReadLine();
@@ -64,4 +65,14 @@ void calcularPromedio()
     }
     promedio = promedio/(double)numeroAlumnos;
     System.Console.WriteLine("El promedio final es de: "+promedio);
+}
+
+void leerTxt()
+{
+    string[] lineas = System.IO.File.ReadAllLines(@"C:\Users\Hds\Init C Sharp\text.txt");
+    foreach(string linea in lineas)
+    {
+        System.Console.WriteLine(""+linea);
+    }
+
 }
