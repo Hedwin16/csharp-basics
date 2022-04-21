@@ -23,6 +23,8 @@ namespace wpfClass
         public MainWindow()
         {
             InitializeComponent();
+            MiSlider.Value=30;
+            MiTextBox.Text = MiSlider.Value.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
