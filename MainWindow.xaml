@@ -11,10 +11,14 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
             <Button Grid.Column="0">
                 Hola
             </Button>
-            <Button Grid.Column="1">
+            <Button Grid.Column="1" Grid.Row="1">
                 Hola 2
             </Button>
 
