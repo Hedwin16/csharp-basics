@@ -24,32 +24,7 @@ namespace wpfClass
         public MainWindow()
         {
             InitializeComponent();
-            List<Juego> juegos = new List<Juego>();
-            juegos.Add(new Juego(){Eq1 = "Barcelona", Eq2="Real Madrid", Puntaje1=3, Puntaje2=2, Progreso=85});
-            juegos.Add(new Juego(){Eq1 = "PSG", Eq2="Bayern Munich", Puntaje1=3, Puntaje2=5, Progreso=40});
-            juegos.Add(new Juego(){Eq1 = "BVB Dormunt", Eq2="AS Roma", Puntaje1=1, Puntaje2=0, Progreso=18});
-            juegos.Add(new Juego(){Eq1 = "Man United", Eq2="Ajax", Puntaje1=1, Puntaje2=2, Progreso=15});
-
-            lbJuego.ItemsSource = juegos;
+            ComboBoxColores.ItemsSource = typeof(Colors).GetProperties();
         }
-        
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           if(lbJuego.SelectedItem != null)
-           {
-               MessageBox.Show("Juego Seleccionado: "+(lbJuego.SelectedItem as Juego).Eq1 
-               + " " + (lbJuego.SelectedItem as Juego).Puntaje1 + " " + (lbJuego.SelectedItem as Juego).Eq2
-               +" "+ (lbJuego.SelectedItem as Juego).Puntaje2);
-           } 
-        }
-
-    }
-    public class Juego
-    {
-        public int Puntaje1 { get; set; }
-        public int Puntaje2 { get; set; }
-        public string Eq1 { get; set; }
-        public string Eq2 { get; set; }
-        public int Progreso { get; set; }
-    }
+    }    
 }
