@@ -24,7 +24,30 @@ namespace wpfClass
         public MainWindow()
         {
             InitializeComponent();
-            ComboBoxColores.ItemsSource = typeof(Colors).GetProperties();
+        }
+
+        private void cdTodosHaCambiado(object sender, RoutedEventArgs e)
+        {
+            bool nuevoValor = (cbTodos.IsChecked == true);
+            cbChile.IsChecked = nuevoValor;
+            cbHongos.IsChecked = nuevoValor;
+            cbMuzzarella.IsChecked=nuevoValor;
+
+        }
+        private void cdSimpleHaCambiado(object sender, RoutedEventArgs e)
+        {
+            cbTodos.IsChecked=null;
+            if((cbChile.IsChecked == true) && (cbHongos.IsChecked == true) && (cbMuzzarella.IsChecked ==true))
+            {
+                cbTodos.IsChecked=true;
+
+            }
+            if((cbChile.IsChecked==false) && (cbHongos.IsChecked==false) && (cbMuzzarella.IsChecked==false ))
+            {
+                cbTodos.IsChecked=false;
+
+            }
+
         }
     }    
 }
