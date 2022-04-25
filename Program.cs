@@ -36,15 +36,16 @@ System.Console.WriteLine("Threads - Hilos");
 //     Console.WriteLine("Subproceso 4");
 // }).Start();
 
-var tareaCompleta = new TaskCompletionSource<bool>();
 
-var hilo = new Thread(() =>
+Enumerable.Range(0, 1000).ToList().ForEach(f =>
 {
-    System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha iniciado");
-    Thread.Sleep(1000);
-    tareaCompleta.TrySetResult(true);
-    System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha terminado");
+    ThreadPool.QueueUserWorkItem((o) =>
+    {
+        System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha iniciado");
+        Thread.Sleep(5000);
+        System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha terminado");
+
+    });
 });
-hilo.Start();
-var prueba = tareaCompleta.Task.Result;
+
 
