@@ -1,10 +1,50 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-int[] numeros = new[] {1,2,3,4,5,6,7,8,9};
+System.Console.WriteLine("Threads - Hilos");
 
-System.Console.WriteLine("Números impares: ");
-IEnumerable<int> impares = from numero in numeros where numero %2 != 0 select numero;
-System.Console.WriteLine("Cantidad de Números impares: "+impares.Count());
-foreach(int impar in impares){
-    System.Console.WriteLine("Impar: "+impar);
-}
+// System.Console.WriteLine("Hola Mundo 1");
+// Thread.Sleep(1000);
+// System.Console.WriteLine("Hola Mundo 2");
+// Thread.Sleep(1000);
+// System.Console.WriteLine("Hola Mundo 3");
+// Thread.Sleep(1000);
+// System.Console.WriteLine("Hola Mundo 4");
+// Thread.Sleep(1000);
+// System.Console.WriteLine("Hola Mundo 5");
+
+// new Thread(()=>
+// {
+//     Thread.Sleep(1000);
+//     Console.WriteLine("Subproceso 1");
+// }).Start();
+
+// new Thread(()=>
+// {
+//     Thread.Sleep(1000);
+//     Console.WriteLine("Subproceso 2");
+// }).Start();
+
+// new Thread(()=>
+// {
+//     Thread.Sleep(1000);
+//     Console.WriteLine("Subproceso 3");
+// }).Start();
+
+// new Thread(()=>
+// {
+//     Thread.Sleep(1000);
+//     Console.WriteLine("Subproceso 4");
+// }).Start();
+
+var tareaCompleta = new TaskCompletionSource<bool>();
+
+var hilo = new Thread(() =>
+{
+    System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha iniciado");
+    Thread.Sleep(1000);
+    tareaCompleta.TrySetResult(true);
+    System.Console.WriteLine($"Número de Subproceso: {Thread.CurrentThread.ManagedThreadId} ha terminado");
+});
+hilo.Start();
+var prueba = tareaCompleta.Task.Result;
+
